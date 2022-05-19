@@ -1,0 +1,15 @@
+import TileMap from "./TileMap.js";
+
+const tileSize = 32;
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+const tileMap = new TileMap(tileSize);
+// console.log("Game Context:", ctx);
+
+function gameLoop() {
+  // console.log("game loop");
+  tileMap.draw(ctx);
+}
+
+tileMap.setCanvasSize(canvas);
+setInterval(1000 / 75);
